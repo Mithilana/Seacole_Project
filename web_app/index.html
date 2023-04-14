@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Motor Driver control panel</title>
+	<style>
+		.button-grid {
+			display: flex;
+			flex-wrap: wrap;
+			width: 95vw;
+			height: 95vh;
+		}
+		.button {
+			flex-basis: calc(33.33% - 20px);
+			height: calc(33.33% - 20px);
+			margin: 10px;
+			background-color: #eee;
+			border: 1px solid #ddd;
+			text-align: center;
+			line-height: calc(33.33% - 20px);
+			font-size: 24px;
+			font-weight: bold;
+			cursor: pointer;
+			transition: background-color 0.2s ease;
+		}
+		.button:active {
+			background-color: #ddd;
+			transition: none;
+		}
+	</style>
+</head>
+<body>
+	<a href="log">View log</a>
+	<h1>Motor control panel</h1>
+	<div class="button-grid">
+		<button class="button" href="/leftinc/">Left +</button>
+		<button class="button" href="/forward/">Forward</button>
+		<button class="button" href="/rightinc/">Right +</button>
+		<button class="button"></button>
+		<button class="button" href="/start-stop/">Start/stop</button>
+		<button class="button" ></button>
+		<button class="button" href="/leftdec/">Left -</button>
+		<button class="button" href="/backward/">Backward</button>
+		<button class="button" href="/rightdec/">Right -</button>
+	</div>
+</body>
+</html>
