@@ -19,7 +19,6 @@ async def main() -> None:
     async with ClientSession() as session:
         try:
             api = await async_login(TILE_EMAIL, TILE_PASSWORD, session)
-
             tiles = await api.async_get_tiles()
             #_LOGGER.info("Tile Count: %s", len(tiles))
             time.sleep(0)
@@ -30,7 +29,6 @@ async def main() -> None:
                 _LOGGER.info("Latitude: %s", tile.latitude)
                 _LOGGER.info("Longitude: %s", tile.longitude)
                 _LOGGER.info("Last Timestamp: %s", tile.last_timestamp)
-                except TileError as err
+        except TileError as err:
                 _LOGGER.info(err)
-                
                 asyncio.run(main())

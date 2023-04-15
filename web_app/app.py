@@ -128,8 +128,13 @@ def rightturn():
     RightSpeedDecrease()
     return render_template('index.html')
 
+@app.after_request
+def add_header(response):
+    response.headers['Cache-Control']='no-store'
+    return response
+
 if __name__ == '__main__':
     f = open('data/speed_logs.txt','w')
-    f.write("Activating motors \n")
+    f.write("Activating motors... \n")
     f.close()
     app.run(host="0.0.0.0")

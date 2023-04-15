@@ -16,6 +16,17 @@ ECHO_right = 22
 GPIO.setup(TRIG_right,GPIO.OUT)
 GPIO.setup(ECHO_right,GPIO.IN)
 
+TRIG_up = 2
+ECHO_up = 3
+
+GPIO.setup(TRIG_up,GPIO.OUT)
+GPIO.setup(ECHO_up,GPIO.IN)
+
+TRIG_down = 10
+ECHO_down = 9 
+
+GPIO.setup(TRIG_down,GPIO.OUT)
+GPIO.setup(ECHO_down,GPIO.IN)
 
 def distance(TRIG, ECHO):
 

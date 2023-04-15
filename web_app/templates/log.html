@@ -33,6 +33,8 @@
 <body>
 	<a href="/">View motor control panel</a>
 	<h1>Logs</h1>
+	<h3>Motor speed logs</h3>
+	<textarea id="seacole-speed" class="file-contents"></textarea>
 
 	<h3>Proximity sensor logs</h3>
 	<textarea id="seacole-prox" class="file-contents"></textarea>
@@ -40,21 +42,20 @@
 	<h3>Tracking logs</h3>
 	<textarea id="seacole-tracking" class="file-contents"></textarea>
 
-	<h3>Motor speed logs</h3>
 
-	<textarea id="seacole-speed" class="file-contents"></textarea>
 
 	<script>
 		// Get the text area element
-		var textarea3 = document.getElementById("seacole-speed");
 		var textarea1 = document.getElementById("seacole-prox");
 		var textarea2 = document.getElementById("seacole-tracking");
+		var textarea3 = document.getElementById("seacole-speed");
+
 
 
 		// Define the URL of the file you want to display
-		var prox_url = "data/prox_logs.txt";
-		var tracking_url = "data/tracking_logs.txt"
-		var speed_url = "data/speed_logs.txt"
+		var speed_url = "data/speed_logs.txt?" + new Date().getTime()
+		var prox_url = "data/prox_logs.txt?" + new Date().getTime();
+		var tracking_url = "data/tracking_logs.txt?" + new Date().getTime()
 
 		// Define the interval at which to update the file contents (in milliseconds)
 		var interval = 1000;

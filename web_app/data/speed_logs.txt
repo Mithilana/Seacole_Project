@@ -1,13 +1,8 @@
-Activating motors 
-Set left speed: 0.1
+Activating motors... 
 Set left speed: 0.1
 Set left speed: 0.1
 Set left speed: 0.2
-Set left speed: 0.2
-Set right speed: 0.1
+Set left speed: 0.30000000000000004
+Set right speed: 0.0
 Set left speed: 0.1
-Set left speed: 0.2
-Set right speed: -0.1
-Set left speed: -0.1
-Set left speed: 0.0
 Set right speed: 0.0
