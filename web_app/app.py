@@ -2,7 +2,7 @@ from flask import Flask, render_template
 from time import sleep
 from gpiozero import Robot, Motor
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='data',static_url_path='/data')
 
 motor = Robot(left=(4, 14), right=(17, 18))
 motorSpeedLeft = 0
@@ -16,12 +16,17 @@ def index():
 def log():
     return render_template('log.html')
 
-@app.route('/start-stop')
+@app.route('/stop')
 def toggleSwitch():
     global motorSpeedLeft
     global motorSpeedRight
-    motorSpeedLeft = 0
     motorSpeedRight = 0
+    motorSpeedLeft = 0
+    motor.stop()
+    print("Stopping motors")
+    f = open('data/speed_logs.txt','a')
+    f.write(f"Stopped motors\n")
+    f.close()
     return render_template('index.html')
 
 #Left Motor
@@ -36,6 +41,9 @@ def LeftSpeedIncrease():
     elif motorSpeedLeft < 0:
         motor.left_motor.backward(speed=abs(motorSpeedLeft)) 
     print("Increased speed of left motor. Current speed = ", round(motorSpeedLeft, 1))
+    f = open('data/speed_logs.txt','a')
+    f.write(f"Set left speed: {motorSpeedLeft}\n")
+    f.close()
     return render_template('index.html')
 
 @app.route('/leftdec')
@@ -49,6 +57,9 @@ def LeftSpeedDecrease():
     elif motorSpeedLeft < 0:
         motor.left_motor.backward(speed=abs(motorSpeedLeft))
     print("Decreased speed of left motor. Current speed = ", round(motorSpeedLeft, 1))
+    f = open('data/speed_logs.txt','a')
+    f.write(f"Set left speed: {motorSpeedLeft}\n")
+    f.close()
     return render_template('index.html')
 
 
@@ -64,6 +75,9 @@ def RightSpeedIncrease():
     elif motorSpeedRight < 0:
         motor.right_motor.backward(speed=abs(motorSpeedRight))
     print("Increased speed of right motor. Current speed = ", round(motorSpeedRight, 1))
+    f = open('data/speed_logs.txt','a')
+    f.write(f"Set left speed: {motorSpeedRight}\n")
+    f.close()
     return render_template('index.html')
 
 @app.route('/rightdec')    
@@ -77,6 +91,9 @@ def RightSpeedDecrease():
     elif motorSpeedRight < 0:
         motor.right_motor.backward(speed=abs(motorSpeedRight))
     print("Decreased speed of right motor. Current speed = ", round(motorSpeedRight, 1))
+    f = open('data/speed_logs.txt','a')
+    f.write(f"Set right speed: {motorSpeedRight}\n")
+    f.close()
     return render_template('index.html')
 
 @app.route('/forward')
@@ -112,4 +129,7 @@ def rightturn():
     return render_template('index.html')
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0')
+    f = open('data/speed_logs.txt','w')
+    f.write("Activating motors \n")
+    f.close()
+    app.run(host="0.0.0.0")

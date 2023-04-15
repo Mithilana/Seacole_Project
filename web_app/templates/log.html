@@ -46,18 +46,18 @@
 
 	<script>
 		// Get the text area element
+		var textarea3 = document.getElementById("seacole-speed");
 		var textarea1 = document.getElementById("seacole-prox");
 		var textarea2 = document.getElementById("seacole-tracking");
-		var textarea3 = document.getElementById("seacole-speed");
 
 
 		// Define the URL of the file you want to display
-		var prox_url = "static/prox_logs.txt";
-		var tracking_url = "static/tracking_logs.txt"
-		var speed_url = "static/speed_logs.txt"
+		var prox_url = "data/prox_logs.txt";
+		var tracking_url = "data/tracking_logs.txt"
+		var speed_url = "data/speed_logs.txt"
 
 		// Define the interval at which to update the file contents (in milliseconds)
-		var interval = 100;
+		var interval = 1000;
 
 		// Define the function to retrieve the file contents
 		function getFileContents(textarea, url) {

@@ -39,6 +39,10 @@ def distance(TRIG, ECHO):
 
 if __name__ == '__main__':
     try:
+        f = open('web_app/static/prox_logs.txt', 'w')
+        f.write("Activating proximity sensors")
+        f.close()
+        f = open('web_app/static/prox_logs.txt', 'a')
         while True:
             distleft = distance(TRIG_left, ECHO_left)
             distright = distance(TRIG_right, ECHO_right)
@@ -46,12 +50,11 @@ if __name__ == '__main__':
                 distleft = 0
             if distright > 2000 or distright < 5:
                 distright = 0
-                
-            print(f"Distance Left = {distleft:.1f} cm   Distance Right = {distright:.1f}cm   ")
+            print(f"Distance Left = {distleft:.1f} cm   Distance Right = {distright:.1f}cm")
+            f.write(f"Distance Left = {distleft:.1f} cm   Distance Right = {distright:.1f}cm")
+        f.close()
     except KeyboardInterrupt:
         print("Measurement stopped by User")
         GPIO.cleanup()
-        
-
 
 
