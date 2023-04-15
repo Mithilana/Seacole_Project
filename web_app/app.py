@@ -101,22 +101,14 @@ def backward():
 
 @app.route('/leftturn')
 def leftturn():
-    global motorSpeedLeft
-    global motorSpeedRight
-    motorSpeedRight = min(abs(motorSpeedRight),abs(motorSpeedLeft))
-    motorSpeedLeft = -motorSpeedRight
     LeftSpeedDecrease()
     RightSpeedIncrease()
     return render_template('index.html')
 
 @app.route('/rightturn')
 def rightturn():
-    global motorSpeedLeft
-    global motorSpeedRight
-    motorSpeedLeft = min(abs(motorSpeedRight),abs(motorSpeedLeft))
-    motorSpeedRight = -motorSpeedLeft
-    LeftSpeedDecrease()
-    RightSpeedIncrease()
+    LeftSpeedIncrease()
+    RightSpeedDecrease()
     return render_template('index.html')
 
 if __name__ == '__main__':
