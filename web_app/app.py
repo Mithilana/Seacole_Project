@@ -8,6 +8,10 @@ motor = Robot(left=(4, 14), right=(17, 18))
 motorSpeedLeft = 0
 motorSpeedRight = 0
 
+f = open('data/speed_logs.txt','w')
+f.write("Activating motors... \n")
+f.close()
+
 @app.route("/")
 def index():
     return render_template('index.html')
@@ -134,7 +138,4 @@ def add_header(response):
     return response
 
 if __name__ == '__main__':
-    f = open('data/speed_logs.txt','w')
-    f.write("Activating motors... \n")
-    f.close()
     app.run(host="0.0.0.0")

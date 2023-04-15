@@ -50,20 +50,27 @@ def distance(TRIG, ECHO):
 
 if __name__ == '__main__':
     try:
-        f = open('web_app/static/prox_logs.txt', 'w')
-        f.write("Activating proximity sensors")
+        f = open('data/prox_logs.txt', 'w')
+        f.write("Activating proximity sensors\n")
         f.close()
-        f = open('web_app/static/prox_logs.txt', 'a')
         while True:
             distleft = distance(TRIG_left, ECHO_left)
             distright = distance(TRIG_right, ECHO_right)
+            distup = distance(TRIG_up, ECHO_up)
+            distdown = distance(TRIG_down, ECHO_down)
             if distleft > 2000 or distleft < 5:
                 distleft = 0
             if distright > 2000 or distright < 5:
                 distright = 0
-            print(f"Distance Left = {distleft:.1f} cm   Distance Right = {distright:.1f}cm")
-            f.write(f"Distance Left = {distleft:.1f} cm   Distance Right = {distright:.1f}cm")
-        f.close()
+            if distup > 2000 or distup < 5:
+                distup = 0
+            if distdown > 2000 or distdown < 5:
+                distdown = 0 
+
+            print(f"Distance Left = {distleft:.1f} cm   Distance Right = {distright:.1f}cm   Distance Up = {distup:.1f}cm   Distance Down = {distdown:.1f}cm")
+            f = open('data/prox_logs.txt', 'a')
+            f.write(f"Distance Left = {distleft:.1f} cm   Distance Right = {distright:.1f}cm   Distance Up = {distup:.1f}cm   Distance Down = {distdown:.1f}cm\n")
+            f.close()
     except KeyboardInterrupt:
         print("Measurement stopped by User")
         GPIO.cleanup()

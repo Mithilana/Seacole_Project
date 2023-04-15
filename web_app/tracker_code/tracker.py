@@ -29,6 +29,12 @@ async def main() -> None:
                 _LOGGER.info("Latitude: %s", tile.latitude)
                 _LOGGER.info("Longitude: %s", tile.longitude)
                 _LOGGER.info("Last Timestamp: %s", tile.last_timestamp)
+
+                #Code to save location data
+                f=open('data/tracking_logs.txt','a')
+                f.write(f"Latitude: {tile.latitude} \n Longitude: {tile.longitude} \n Last Timestamp:  {tile.last_timestamp}")
+                f.close()
+
         except TileError as err:
                 _LOGGER.info(err)
                 asyncio.run(main())

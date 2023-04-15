@@ -1,1 +1,35 @@
-proximity beep boop
+Activating proximity sensors
+Distance Left = 302.9 cm   Distance Right = 0.0cm   Distance Up = 292.9cm   Distance Down = 167.0cm
+Distance Left = 0.0 cm   Distance Right = 0.0cm   Distance Up = 292.3cm   Distance Down = 6.1cm
+Distance Left = 270.9 cm   Distance Right = 0.0cm   Distance Up = 292.8cm   Distance Down = 18.2cm
+Distance Left = 270.1 cm   Distance Right = 0.0cm   Distance Up = 290.6cm   Distance Down = 17.8cm
+Distance Left = 269.2 cm   Distance Right = 0.0cm   Distance Up = 291.0cm   Distance Down = 17.8cm
+Distance Left = 270.9 cm   Distance Right = 0.0cm   Distance Up = 291.5cm   Distance Down = 17.9cm
+Distance Left = 270.9 cm   Distance Right = 0.0cm   Distance Up = 291.8cm   Distance Down = 18.7cm
+Distance Left = 269.2 cm   Distance Right = 0.0cm   Distance Up = 292.3cm   Distance Down = 17.8cm
+Distance Left = 270.4 cm   Distance Right = 0.0cm   Distance Up = 291.0cm   Distance Down = 0.0cm
+Distance Left = 10.8 cm   Distance Right = 397.3cm   Distance Up = 0.0cm   Distance Down = 0.0cm
+Distance Left = 268.0 cm   Distance Right = 13.7cm   Distance Up = 0.0cm   Distance Down = 0.0cm
+Distance Left = 293.8 cm   Distance Right = 13.3cm   Distance Up = 0.0cm   Distance Down = 9.1cm
+Distance Left = 7.0 cm   Distance Right = 13.8cm   Distance Up = 0.0cm   Distance Down = 7.9cm
+Distance Left = 6.8 cm   Distance Right = 13.8cm   Distance Up = 0.0cm   Distance Down = 5.7cm
+Distance Left = 294.1 cm   Distance Right = 13.3cm   Distance Up = 0.0cm   Distance Down = 16.5cm
+Distance Left = 270.5 cm   Distance Right = 12.9cm   Distance Up = 0.0cm   Distance Down = 16.5cm
+Distance Left = 293.7 cm   Distance Right = 13.7cm   Distance Up = 0.0cm   Distance Down = 5.9cm
+Distance Left = 259.1 cm   Distance Right = 12.9cm   Distance Up = 0.0cm   Distance Down = 16.9cm
+Distance Left = 291.9 cm   Distance Right = 12.9cm   Distance Up = 0.0cm   Distance Down = 13.6cm
+Distance Left = 31.1 cm   Distance Right = 13.3cm   Distance Up = 0.0cm   Distance Down = 10.3cm
+Distance Left = 11.6 cm   Distance Right = 14.5cm   Distance Up = 0.0cm   Distance Down = 108.8cm
+Distance Left = 28.8 cm   Distance Right = 111.2cm   Distance Up = 246.9cm   Distance Down = 9.9cm
+Distance Left = 0.0 cm   Distance Right = 8.3cm   Distance Up = 0.0cm   Distance Down = 0.0cm
+Distance Left = 0.0 cm   Distance Right = 7.5cm   Distance Up = 0.0cm   Distance Down = 0.0cm
+Distance Left = 0.0 cm   Distance Right = 8.3cm   Distance Up = 5.8cm   Distance Down = 0.0cm
+Distance Left = 5.3 cm   Distance Right = 9.8cm   Distance Up = 6.9cm   Distance Down = 0.0cm
+Distance Left = 5.2 cm   Distance Right = 9.7cm   Distance Up = 5.7cm   Distance Down = 0.0cm
+Distance Left = 5.3 cm   Distance Right = 112.4cm   Distance Up = 0.0cm   Distance Down = 0.0cm
+Distance Left = 5.9 cm   Distance Right = 10.6cm   Distance Up = 6.3cm   Distance Down = 19.6cm
+Distance Left = 5.5 cm   Distance Right = 10.0cm   Distance Up = 5.4cm   Distance Down = 15.8cm
+Distance Left = 8.9 cm   Distance Right = 111.6cm   Distance Up = 0.0cm   Distance Down = 98.3cm
+Distance Left = 271.9 cm   Distance Right = 112.1cm   Distance Up = 0.0cm   Distance Down = 96.3cm
+Distance Left = 271.1 cm   Distance Right = 112.8cm   Distance Up = 0.0cm   Distance Down = 30.6cm
+Distance Left = 274.1 cm   Distance Right = 111.5cm   Distance Up = 0.0cm   Distance Down = 29.7cm
