@@ -30,17 +30,18 @@
 </head>
 <body>
 	<a href="log">View log</a>
+	<a href="backward">back</a>
 	<h1>Motor control panel</h1>
 	<div class="button-grid">
-		<button class="button" href="/leftinc/">Left +</button>
-		<button class="button" href="/forward/">Forward</button>
-		<button class="button" href="/rightinc/">Right +</button>
-		<button class="button"></button>
-		<button class="button" href="/start-stop/">Start/stop</button>
-		<button class="button" ></button>
-		<button class="button" href="/leftdec/">Left -</button>
-		<button class="button" href="/backward/">Backward</button>
-		<button class="button" href="/rightdec/">Right -</button>
+		<button class="button" onclick="location.href='leftinc'" type="button">Left motor +</button>
+		<button class="button" onclick="location.href='forward'" type="button">Forward</button>
+		<button class="button" onclick="location.href='rightinc'" type="button">Right motor +</button>
+		<button class="button" onclick="location.href='leftturn'" type="button">Left turn</button>
+		<button class="button" onclick="location.href='start-stop'" type="button">Start/stop</button>
+		<button class="button" onclick="location.href='rightturn'" type="button">Right turn</button>
+		<button class="button" onclick="location.href='leftdec'" type="button">Left motor-</button>
+		<button class="button" onclick="location.href='backward'" type="button">Backward</button>
+		<button class="button" onclick="location.href='rightdec'" type="button">Right motor-</button>
 	</div>
 </body>
 </html>
